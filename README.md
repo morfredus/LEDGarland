@@ -6,7 +6,7 @@
 
 Controller for bi-directional LED garland and 8x8 NeoPixel matrix animation on **ESP32 Classic** (IdeaSpark/DevKitC), **ESP32 Wroom (DevKit V1)**, **ESP32-S3 Mini**, **ESP32-S3 Super Mini** — all platforms support **OLED SSD1306 (I2C)** if connected (see per-board pins in the Pin Mapping guide). PIR/RCWL-0516 auto-detection, **modern web interface with instant save**, responsive layout, flash-free AJAX updates, web-based OTA updates, **mDNS support for easy access via unique device name**, physical controls: BOOT + 1 user button (see below), 11 garland animations, multiple festive matrix animations, dual independent control, smart modes, persistent configuration, automatic startup animations.
 
-## ✨ What's New in v5.2.0
+## What's New in v5.2.0
 
 1. **ESP32-C3 HW-675 support (MINOR)** - New hardware platform with OLED 0.42" (72×40 px) display
 2. **Universal OLED display** - IP + Mode display on OLED SSD1306 (I2C), available on all platforms if connected
@@ -16,9 +16,9 @@ Controller for bi-directional LED garland and 8x8 NeoPixel matrix animation on *
 
 See [CHANGELOG.md](./CHANGELOG.md) for older releases.
 
-## ✨ What's New in v3.0.0
+## What's New in v3.0.0
 
-### 💥 Complete Web UI Card Reorganization (BREAKING CHANGE)
+### Complete Web UI Card Reorganization (BREAKING CHANGE)
 - **New navigation flow** - Card order completely restructured for better UX
 - **Animations prioritized** - Garland and Matrix animations now at top (most frequently accessed)
 - **3-zone Mode card** - Mode + screen mode side-by-side, all parameters below in unified section
@@ -26,17 +26,17 @@ See [CHANGELOG.md](./CHANGELOG.md) for older releases.
 - **Consolidated parameters** - All temporal parameters + matrix brightness in one place
 - **Reduced scrolling** - More compact layout with logical grouping
 
-### 📋 New Card Order (v3.0.0)
-1. 🎄 **Animations Guirlande** - All garland animations (was Card 2)
-2. 🎨 **Matrice 8x8** - All matrix animations (was Card 3)
-3. 🎯 **Mode de fonctionnement** - 3-zone layout:
+### New Card Order (v3.0.0)
+1. **Animations Guirlande** - All garland animations (was Card 2)
+2. **Matrice 8x8** - All matrix animations (was Card 3)
+3. **Mode de fonctionnement** - 3-zone layout:
    - Zone A (left): Mode selection (Auto/Manuel/Détection)
    - Zone B (right): screen display mode (was separate Card 4)
    - Zone C (below): All temporal parameters + matrix brightness
-4. ℹ️ **Système & Réseau** - System and network information
-5. 🏷️ **Nom d'appareil** - Device name configuration
+4. **Système & Réseau** - System and network information
+5. **Nom d'appareil** - Device name configuration
 
-### 🎨 Enhanced Mode Card Design
+### Enhanced Mode Card Design
 **Side-by-Side Layout** (CSS Grid):
 - **Left Half**: Operating mode selection (Auto | Manuel | Détection mouvement)
 - **Right Half**: screen display mode (Animated + matrix | animation only | screen off)
@@ -75,7 +75,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for older releases.
 - **ESP32-S3 Mini** (esp32s3_mini)
 - **ESP32-S3 Super Mini** (esp32s3_supermini)
 
-> 📌 **OLED SSD1306 (I2C) display is supported on all platforms if connected. See per-board I2C pins in the Pin Mapping guide.**
+> **OLED SSD1306 (I2C) display is supported on all platforms if connected. See per-board I2C pins in the Pin Mapping guide.**
 
 
 #### Required Components (all platforms)
@@ -238,7 +238,7 @@ You can choose the upload method (USB or OTA) at each upload without editing pla
       ```
    - Replace `192.168.x.x` with your ESP32's IP address
    - PlatformIO will automatically use OTA for this upload
-   - ⚠️ **Note:** PlatformIO will show a warning:
+   - **Note:** PlatformIO will show a warning:
      > We have just detected `upload_port` as IP address or host name of ESP device. `upload_protocol` is switched to `espota`.
      This is normal and does not require any change in your configuration.
 
@@ -261,7 +261,7 @@ The device can be accessed in **two ways**:
    - OLED display (if connected)
    - Your router's connected devices list
 
-2. **Via mDNS Name** (recommended) 🆕:
+2. **Via mDNS Name** (recommended):
    ```
    http://garland.local
    ```
@@ -274,7 +274,7 @@ The device can be accessed in **two ways**:
 You can change the mDNS device name directly from the web interface:
 
 1. Access the web interface (`http://garland.local` or `http://[IP]`)
-2. Scroll to **"🏷️ Device Name (mDNS)"** section
+2. Scroll to **"Device Name (mDNS)"** section
 3. Enter your desired name (alphanumeric, dash, underscore, max 32 chars)
 4. Click **"Apply"**
 5. Your device is now accessible at `http://[your-name].local`
@@ -306,7 +306,7 @@ You can change the mDNS device name directly from the web interface:
 
 The firmware supports **two OTA update methods**:
 
-### 6.1. Web-based OTA Update (New in v1.4.0) ⭐
+### 6.1. Web-based OTA Update (New in v1.4.0)
 
 **The simplest and recommended method!**
 
@@ -317,12 +317,12 @@ The firmware supports **two OTA update methods**:
 
 2. Access the ESP32's web interface: `http://[ESP32_IP]`
 
-3. Click the **"⬆️ OTA Update"** button on the dashboard
+3. Click the **"OTA Update"** button on the dashboard
 
 4. On the update page:
-   - Click **"📁 Select .bin file"**
+   - Click **"Select .bin file"**
    - Navigate to `.pio/build/esp32devkitc/firmware.bin`
-   - Click **"🚀 Start Update"**
+   - Click **"Start Update"**
 
 5. Progress is displayed in real-time:
    - Progress bar in the browser
@@ -331,13 +331,13 @@ The firmware supports **two OTA update methods**:
 6. The ESP32 reboots automatically after a successful update
 
 **Advantages:**
-- ✅ Intuitive graphical interface
-- ✅ No PlatformIO commands needed
-- ✅ Works from any browser (PC, smartphone, tablet)
-- ✅ Real-time progress display
-- ✅ Automatic file validation
+- Intuitive graphical interface
+- No PlatformIO commands needed
+- Works from any browser (PC, smartphone, tablet)
+- Real-time progress display
+- Automatic file validation
 
-**⚠️ Important:** Do not unplug the device during the update!
+**Important:** Do not unplug the device during the update!
 
 ### 6.2. OTA Update via ArduinoOTA (PlatformIO)
 
@@ -440,7 +440,7 @@ See [docs/PIN_MAPPING.md](docs/PIN_MAPPING.md) for wiring details.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Anim-Guirlande/
@@ -471,7 +471,7 @@ Anim-Guirlande/
 
 ---
 
-## 🔧 Advanced Configuration
+## Advanced Configuration
 
 ### Disable Displays
 In `include/config.h`:
@@ -487,7 +487,7 @@ In `include/garland_control.h`:
 
 ---
 
-## 📊 Technical Specifications
+## Technical Specifications
 
 ### LED Garland
 - Type: 2-wire with anti-parallel LEDs
@@ -517,7 +517,7 @@ In `include/garland_control.h`:
 
 ---
 
-## 🚀 Startup Behavior
+## Startup Behavior
 
 At boot, the system initializes with:
 - **Animation Mode**: `AUTO` - Cycles through all 14 animations (30 seconds each)
@@ -532,7 +532,7 @@ static GarlandMode currentMode = MODE_PERMANENT;         // Or MODE_MOTION_TRIGG
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Garland Doesn't Light Up
 - Check TB6612FNG wiring (VCC, GND, VM)
@@ -565,7 +565,7 @@ static GarlandMode currentMode = MODE_PERMANENT;         // Or MODE_MOTION_TRIGG
 
 ---
 
-## 📝 Versions
+## Versions
 
 **Current Version: v5.6.4** (2026-02-02)
 
@@ -573,7 +573,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for complete history.
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[README_FR.md](./README_FR.md)** - French version
 - **[CHANGELOG.md](./CHANGELOG.md)** - Version history (English)
@@ -585,7 +585,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for complete history.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 1. Fork the project
@@ -596,30 +596,30 @@ Contributions are welcome! Please:
 
 ---
 
-## 📄 License
+## License
 
 This project is provided as-is for educational and personal use.
 
 ---
 
-## 👤 Author
+## Author
 
 Created as a specialized ESP32 project for controlling bi-directional LED garlands with advanced animations and smart operating modes.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - PlatformIO team for the excellent development platform
 - Adafruit for display and sensor libraries
 - ESP32 community for Arduino framework support
 - TB6612FNG module for reliable motor/LED control
 
-## 📄 Licence
+## Licence
 
 Ce projet est libre d'utilisation pour projets personnels et éducatifs.
 
-## ✨ Remerciements
+## Remerciements
 
 * Adafruit pour les bibliothèques NeoPixel et U8g2
 * PlatformIO pour l'environnement de développement
@@ -627,7 +627,7 @@ Ce projet est libre d'utilisation pour projets personnels et éducatifs.
 
 ---
 
-**Projet Anim-Guirlande v5.6.4** - Animations de guirlande LED avec ESP32 🎄✨
-## 🌍 Internationalization & Language Policy
+**Projet Anim-Guirlande v5.6.4** - Animations de guirlande LED avec ESP32
+## Internationalization & Language Policy
 
 As of version 5.3.3, all user-facing and log messages in the codebase are in English only (except *_FR.md documentation files). This ensures full internationalization and easier maintenance for all users and contributors. See the [CHANGELOG](CHANGELOG.md) for details.
