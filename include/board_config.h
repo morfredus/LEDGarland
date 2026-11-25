@@ -5,7 +5,7 @@
 /**
  * @file board_config.h
  * @brief Configuration matérielle multi-cartes (ESP32 Classic, Wroom, S3 Mini)
- * @version 5.6.4
+ * @version 5.6.5
  * @date 2026-02-02
  */
 

@@ -1,3 +1,11 @@
+# [5.6.5] - 2026-11-25
+
+### Added
+1. New hardware note `docs/POWER_DECOUPLING.md`: why and how to decouple the NeoPixel matrix power (1000µF capacitor, 470Ω data resistor), consequences without it, and optional diode protections (series Schottky on 5V, reverse polarity)
+
+### Changed
+2. HARDWARE_GUIDE: capacitor and resistor documented as optional, Schottky diode added to the optional parts, links to the new note
+
 # [5.6.4] - 2026-02-02
 
 ### Fixed

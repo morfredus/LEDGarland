@@ -1,3 +1,11 @@
+# [5.6.5] - 2026-11-25
+
+### Ajouté
+1. Nouvelle note matérielle `docs/POWER_DECOUPLING_FR.md` : pourquoi et comment découpler l'alimentation de la matrice NeoPixel (condensateur 1000µF, résistance data 470Ω), conséquences en son absence, et protections optionnelles par diode (Schottky en série sur le 5V, polarité)
+
+### Modifié
+2. HARDWARE_GUIDE : condensateur et résistance documentés comme optionnels, diode Schottky ajoutée aux composants optionnels, liens vers la nouvelle note
+
 # [5.6.4] - 2026-02-02
 
 ### Corrigé

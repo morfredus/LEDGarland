@@ -37,8 +37,9 @@ Liste d'achat complète et spécifications des composants pour construire le pro
 |-----------|----------|------|---------|
 | Radar RCWL-0516 | 1 | 2-3€ | Alternative au PIR (plus rapide, plus sensible) |
 | Adaptateur jack DC | 1 | 2-3€ | Pour connexion alimentation plus propre |
-| Condensateur 1000µF 16V | 1-2 | 1-2€ | Lissage de l'alimentation |
-| Résistance 470Ω | 1 | 0.10€ | Protection ligne de données NeoPixels |
+| Condensateur 1000µF 16V | 1-2 | 1-2€ | Optionnel : découplage de l'alimentation de la matrice, voir [POWER_DECOUPLING_FR.md](POWER_DECOUPLING_FR.md) |
+| Résistance 470Ω | 1 | 0.10€ | Optionnelle : protection ligne de données NeoPixels |
+| Diode Schottky 3A (1N5822/SB360) | 1 | 0.50€ | Optionnelle : diode en série sur le 5V de la matrice (seuil VDD et polarité), voir [POWER_DECOUPLING_FR.md](POWER_DECOUPLING_FR.md) |
 
 ---
 
@@ -196,7 +197,7 @@ Liste d'achat complète et spécifications des composants pour construire le pro
 **Notes de sécurité importantes :**
 - ⚠️ NE PAS utiliser d'alimentations bon marché/non certifiées
 - ⚠️ Assurer la polarité correcte (centre positif pour jacks barrel)
-- ✅ Ajouter condensateur 1000µF près de la matrice pour stabilité
+- ➕ Optionnel : un condensateur 1000µF entre 5V et GND directement à l'entrée de la matrice (voir [POWER_DECOUPLING_FR.md](POWER_DECOUPLING_FR.md) pour le pourquoi et les symptômes en son absence)
 
 ---
 

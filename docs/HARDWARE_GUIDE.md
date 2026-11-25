@@ -38,8 +38,9 @@ Complete shopping list and component specifications for building the LED-Garland
 | RCWL-0516 Radar | 1 | $2-3 | Alternative to PIR (faster, more sensitive) |
 | PIR HC-SR501 | 1 | $2-4 | Motion detection |
 | DC Barrel Jack Adapter | 1 | $2-3 | For cleaner power connection |
-| Capacitor 1000µF 16V | 1-2 | $1-2 | Power supply smoothing |
-| Resistor 470Ω | 1 | $0.10 | Data line protection for NeoPixels |
+| Capacitor 1000µF 16V | 1-2 | $1-2 | Optional: matrix power decoupling, see [POWER_DECOUPLING.md](POWER_DECOUPLING.md) |
+| Resistor 470Ω | 1 | $0.10 | Optional: data line protection for NeoPixels |
+| Schottky diode 3A (1N5822/SB360) | 1 | $0.50 | Optional: series diode on matrix 5V feed (VDD threshold and reverse polarity), see [POWER_DECOUPLING.md](POWER_DECOUPLING.md) |
 
 ---
 
@@ -245,7 +246,7 @@ Complete shopping list and component specifications for building the LED-Garland
 - ⚠️ Do NOT use cheap/uncertified power supplies
 - ⚠️ Ensure proper polarity (center-positive for barrel jacks)
 - ⚠️ Never exceed rated current
-- ✅ Add 1000µF capacitor near matrix for stability
+- ➕ Optional: a 1000µF capacitor across 5V/GND right at the matrix input (see [POWER_DECOUPLING.md](POWER_DECOUPLING.md) for the why and the symptoms without it)
 
 ### 7. Breadboard and Wiring
 
